@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+.bulletlist {
+  list-style-type: none !important;
+}
+
+.bulletlist li:before {
+  content: "\e052" !important;
+  color: #2cba6c;
+  font-family: "ETMODULES" !important;
+  margin-right: 10px;
+  margin-left: -14px;
+  font-size: 1.2em !important;
+}
+*/
+
+/*
+#charities {
+  background: white;
+  z-index: 0;
+  position: relative;
+  clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 84%);
+}
+*/
+
+#charities {
+  background: url("../public/media/background-diagonal.svg");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-size: 1800px;
+  position: relative;
+}
+
+@media (min-width: 1418px) {
+  #charities {
+    -webkit-background-size: cover; /* For WebKit */
+    -moz-background-size: cover; /* Mozilla */
+    -o-background-size: cover; /* Opera */
+    background-size: cover;
+  }
+}
+
+#charities-after {
+  background-image: url("../public/media/Vector_71.svg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  -webkit-background-size: cover; /* For WebKit*/
+  -moz-background-size: cover; /* Mozilla*/
+  -o-background-size: cover; /* Opera*/
+  background-size: cover;
+}
+
+.navbar,
+.logo,
+.navcta {
+  z-index: 1;
+  transition: all 0.7s ease;
+}
+
+.accordion-1 {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s ease-out;
+}
+
+.accordion-2 {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s ease-out;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.bigcontainer {
+  max-height: 1842px;
+}
+
+#mobile-nav {
+  transition: transform 0.4s ease-in-out;
+}
+
+#roadmap li {
+  /*position: relative;
+  list-style-image: url("../public/media/icons/checkmark\ icon.svg");*/
+  background: url("../public/media/icons/checkmark\ icon.svg") no-repeat left
+    3px; /* <-- change `left` & `top` too for extra control */
+  background-size: 22px 22px;
+  padding: 0px 0px 0px 32px;
+  /* reset styles (optional): */
+  list-style: none;
+}
+
+#roadmapmobile li {
+  /*position: relative;
+  list-style-image: url("../public/media/icons/checkmark\ icon.svg");*/
+  background: url("../public/media/icons/checkmark\ icon.svg") no-repeat left
+    3px; /* <-- change `left` & `top` too for extra control */
+  background-size: 22px 22px;
+  padding: 0px 0px 0px 32px;
+  /* reset styles (optional): */
+  list-style: none;
+}
+
+#contact .input input {
+  height: 30px;
+}
+/*
+#roadmap li::before {
+  content: '';  placeholder for the SVG
+  position: absolute;
+  left: 30px;  /* place the SVG at the start of the padding
+  width: 12px;
+  height: 12px;
+  background: url("../public/media/icons/checkmark\ icon.svg");
+}
+*/
+
+@media (min-width: 768px) {
+  .bigcontainer {
+    max-height: 864px;
+    transition: max-height 0.2s ease-out;
+  }
+
+  #contact .input {
+    max-width: 100%;
+  }
+  #contact .input input {
+    height: 50px;
+    max-width: 100%;
+  }
+
+  #contact textarea {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 887px) {
+  .bigcontainer {
+    max-height: 901px;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+@media (min-width: 980px) {
+  .bigcontainer {
+    max-height: 833px;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+@media (min-width: 1029px) {
+  .bigcontainer {
+    max-height: 815px;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+@media (min-width: 1088px) {
+  .bigcontainer {
+    max-height: 833px;
+    transition: max-height 0.2s ease-out;
+  }
+
+  #contact .input {
+    max-width: calc(50% - 30px);
+  }
+}
+@media (min-width: 1117px) {
+  .bigcontainer {
+    max-height: 904px;
+    transition: max-height 0.2s ease-out;
+  }
+}

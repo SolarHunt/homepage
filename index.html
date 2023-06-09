@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>SolarFund</title>
+    <link rel="stylesheet" type="text/css" href="./public/style.css">
+</head>
+
+<body class="font-wa text-primary">
+    <div id="wrapper" class="overflow-hidden relative bg-background">
+        <header class="relative z-10">
+            <div class="md:fixed items-center md:mx-auto md:inset-x-0">
+                <!-- Desktop navbar -->
+                <div class="navbar relative max-w-full hidden h-m justify-between px-xs md:flex md:mx-auto md:h-l md:px-7/100 xl:px-xl">
+                    <!-- height : 90px (60px mobile) -->
+                    <!-- fix: height : 60px-->
+                    <div class="flex items-center">
+                        <a href="#">
+                            <img src="./public/SolarFund-Logo.png" alt="" class="logo md:h-14">
+
+                            <!-- img height 60px-->
+                        </a>
+                    </div>
+
+                    <nav class="flex md:items-center">
+                        <div class="px-s">
+                            <ul class="flex inset-x-0 content-center justify-between">
+                                <li class="pr-xs"><a href="#charities" class="text-base">Causes</a></li>
+                                <li class="px-xs"><a href="#mechanism" class="text-base">Mechanism</a></li>
+                                <li class="px-xs"><a href="#roadmap" class="text-base">Roadmap</a></li>
+                                <li class="pl-xs"><a href="#team" class="hidden text-base">Team</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Mobile nav menu -->
+                <div class="md:hidden pt-xs px-xs">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <a href="#">
+                                <img src="./public/SolarFund-Logo.png" alt="" class="logo h-s">
+                                <!-- img height 60px-->
+                            </a>
+                        </div>
+                        <button id="hamburger" class="flex items-center">
+                            <h6 class="uppercase font-bold mr-xs">Menu</h6>
+                            <h6 class="hidden uppercase font-bold mr-xs">Close</h6>
+                            <!-- hamburger icon -->
+                            <svg id="hbgicon" class="h-6 w-6 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M2 3h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z"
+                                    id="a" />
+                            </svg>
+                            <!-- cross icon -->
+                            <svg id="crossicon" class="hidden h-6 w-6 fill-current" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+                                <path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="mobile-nav" class="flex flex-col w-full h-screen absolute translate-x-full right-0 bg-background pt-m">
+                        <ul>
+                            <li class="block w-4/5 border-b-2 border-primary mx-s py-xs">
+                                <a href="#charities" class="text-base">Causes</a>
+                            </li>
+                            <li class="block w-4/5 border-b-2 border-primary mx-s py-xs">
+                                <a href="#mechanism" class="text-base">Mechanism</a>
+                            </li>
+                            <li class="block w-4/5 border-b-2 border-primary mx-s py-xs">
+                                <a href="#roadmap" class="text-base">Roadmap</a>
+                            </li>
+                            <li class="hidden w-4/5 border-b-2 border-primary mx-s py-xs">
+                                <a href="#team" class="text-base">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative">
+            <div class="pt-m md:pt-xxl overflow-x-hidden text-base">
+            <!-- PRESENTATION -->
+                <section class="max-w-max mx-xs md:max-w-7xl md:mx-auto">
+                    <div class="mb-s md:flex md:flex-col md:max-w-86/100 md:mx-auto md:mb-l">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-7030 md:mr-l">
+                                <div>
+                                    <h6 class="text-h6 text-tertiary uppercase font-bold">The Mission</h6>
+                                    <h1 class="text-h1mobile font-bold md:text-h1">Incentivise Donors,<br/>with treasure hunts!</h1>
+                                </div>
+                                <p class="text-justify my-xs md:text-left md:my-s">All the
+                                    <span class="font-bold">transparency</span>. with one button <span class="font-bold">Gamification of Donations to non-profit causes.  
+                                </p>
+                                <!-- 
+                                  All the transparency with one button, Chain backed Treasure Hunts. 
+                                  Gamification of Donations to non-profit causes.
+                                  
+                              -->
+                                <div class="flex justify-between border-2 border-tertiary rounded-full bg-white md:w-5/10">
+                                    <input type="email" name="contact" placeholder="Enter your email"
+                                        class="w-6/10 grow lg:grow-0 border border-transparent rounded-l-full pl-xs pr-2 py-2.5" />
+                                    <button class="hidden lg:flex grow justify-center border border-transparent rounded-r-full bg-tertiary text-background font-semibold uppercase px-xs py-2.5">
+                                        Join Us
+                                    </button>
+                                    <button
+                                        class="border border-transparent rounded-r-full bg-tertiary text-background font-semibold px-xs py-2.5 lg:hidden">
+                                        <svg width="21" height="18" viewBox="0 0 21 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.00999999 18L21 9L0.00999999 0L0 7L15 9L0 11L0.00999999 18Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-m mx-auto md:grow md:mt-64 md3:my-auto">
+                                <img src="./public/side.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!---->
+
+            <!-- CHARITIES -->
+                <section id="charities" class="max-w-full md:mx-auto pt-xl md:mb-0 md:pt-xxl md:pb-l">
+                    <div class="flex flex-col text-center md:max-w-7xl mx-auto">
+                        <h2 class="text-h3mobile text-center font-bold mx-xs md:mx-auto md:max-w-180 md:text-h3">Ready to use for World-leading 
+                            nonprofits</h2>
+                        <div class="flex flex-row md:flex-col flex-wrap md:max-w-86/100 justify-center mt-s mx-xs md:mx-auto md:mt-xs lgsection2:flex-row">
+                            <div class="flex flex-row justify-center mx-auto">
+                                <img src="./public/habitat_logo.svg" alt="Habitat logo" class="mr-s lgsection2:mr-xs h-xl" />
+                                <img src="./public/greenpeace_logo.svg" alt="Greenpeace logo" class="xs:mx-s lgsection2:mx-xs h-xl" />
+                                <img src="./public/stjude_logo.svg" alt="St jude's logo" class="hidden xs:flex xs:ml-s lgsection2:mx-xs h-xl" />
+                            </div>
+                            <div class="flex flex-row">
+                                <img src="./public/stjude_logo.svg" alt="St jude's logo" class="xs:hidden h-xl mr-xs" />
+                                <img src="./public/unicef_logo.svg" alt="Unicef logo" class="xs:hidden h-xl ml-xs" />
+                            </div>
+                            <div class="flex flex-row">
+                                <img src="./public/unicef_logo.svg" alt="Unicef logo" class="hidden xs:flex xs:mr-s h-xl lgsection2:mx-xs" />
+                                <img src="./public/wwf_logo.svg" alt="WWF logo" class="mr-xs xs:mx-s lgsection2:mx-xs h-xl" />
+                                <img src="./public/medecins_sans_frontieres.svg" alt="MSF logo" class="ml-xs xs:ml-s lgsection2:ml-xs h-xl" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <div id="charities-after" class="h-m md:h-xl md:mb-xl"></div>
+            <!---->
+
+                <!-- Step 2 -->
+                <section class="max-w-max mx-xs md:max-w-7xl md:mx-auto">
+                    <div class="flex flex-col mb-l md:flex-row md:max-w-86/100 md:mx-auto md:mb-xxl">
+                        <div class="flex flex-col md:w-7030 md:mr-l">
+                            <h6 class="text-h6 text-tertiary uppercase font-bold md:text-left">What we know</h6>
+                            <h2 class="text-h2mobile font-bold md:text-h2 md:text-left">51%* want transparency first to donate more
+                            </h2>
+                            <p class="text-phuge-mobile my-s md:text-phuge">A new generation is rising that wants <span
+                                    class="font-bold">accountability</span>,
+                                <span class="font-bold">transparency</span> and <span class="font-bold">direct
+                                    access</span> when they donate to a Cause.
+                            </p>
+                            <p class="mb-xs">Donation Marathon, art shows, car washes, spelling bees, bake sales, or Treasure Hunts.
+                              Everything possible, with a <span class="font-bold">community committed to the Web3 ethos of decentralization and transparency</span>.
+                              </p>
+                            <!-- 
+                              Donation Marathon, art shows, car washes, spelling bees, bake sales, or Treasure Hunts.
+                              Everything possible, with a community committed to the Web3 ethos of decentralization and transparency.
+                             -->
+                            <p class="text-details-mobile text-left md:text-details">Source: Google Survey, World Unite, US, February 2022, n = 305
+                                respondents.</p>
+                        </div>
+                        <div class="w-7/10 mx-auto mt-m md:w-3070 md:mx-0 md:mt-64 mdsection3:my-auto lg3:my-0">
+                            <img class="mx-auto" src="./public/3d-btc-eth.svg" alt="3d-logo">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MECHANISM -->
+                <section class="max-w-max mx-xs md:max-w-7xl md:mx-auto">
+                    <div id="mechanism" class="mb-l flex flex-col md:max-w-86/100 md:mx-auto md:mb-xl">
+                        <div class="flex flex-col items-center">
+                            <h6 class="text-tertiary uppercase font-bold">This is how it works!</h6>
+                            <h2 class="text-h2mobile text-center font-bold md:text-h2">Let's work on this together</h2>
+                        </div>
+                        <div class="flex flex-col flex-wrap">
+                            <div class="bigcontainer flex flex-col-reverse flex-wrap my-m md:flex-col md:my-l">
+                                <div class="mt-s md:w-5/10margin md:mt-0">
+                                    <div class="items-center mx-auto">
+                                        <img src="./public/map.png" alt="Example"
+                                            class="w-full rounded-lg mx-auto" />
+                                    </div>
+                                    <h6 class="text-h6 text-tertiary uppercase font-semibold text-left mt-l md:mt-m">Donors</h6>
+                                    <!-- accordion -->
+                                    <div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-1 flex items-center hover:text-tertiary">
+                                                <!-- Icon number 1 -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M11.378 11.006V8.78H15.256V19H12.764V11.006H11.378Z" fill="white"/>
+                                                </svg>
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">Get challenged by Top Causes</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left">
+                                                  We take the due diligence to confirm the legibility of the Charities hosted.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-1 flex items-center hover:text-tertiary">
+                                                <!-- Icon number 2 -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M10.546 17.082C10.8633 16.83 11.008 16.7133 10.98 16.732C11.8947 15.976 12.6133 15.3553 13.136 14.87C13.668 14.3847 14.116 13.876 14.48 13.344C14.844 12.812 15.026 12.294 15.026 11.79C15.026 11.4073 14.9373 11.1087 14.76 10.894C14.5827 10.6793 14.3167 10.572 13.962 10.572C13.6073 10.572 13.3273 10.7073 13.122 10.978C12.926 11.2393 12.828 11.6127 12.828 12.098H10.518C10.5367 11.3047 10.7047 10.642 11.022 10.11C11.3487 9.578 11.7733 9.186 12.296 8.934C12.828 8.682 13.416 8.556 14.06 8.556C15.1707 8.556 16.006 8.84067 16.566 9.41C17.1353 9.97933 17.42 10.7213 17.42 11.636C17.42 12.6347 17.0793 13.5633 16.398 14.422C15.7167 15.2713 14.8487 16.102 13.794 16.914H17.574V18.86H10.546V17.082Z" fill="white"/>
+                                                </svg>
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">Have fun</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left"> 
+                                                  There are many creative way Organizers can host an exciting - challenging event for all donators!                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-1 flex items-center hover:text-tertiary">
+                                                <!-- icon number 3 -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M10.714 11.664C10.7513 10.6653 11.078 9.89533 11.694 9.354C12.31 8.81267 13.1453 8.542 14.2 8.542C14.9 8.542 15.4973 8.66333 15.992 8.906C16.496 9.14867 16.874 9.48 17.126 9.9C17.3873 10.32 17.518 10.7913 17.518 11.314C17.518 11.93 17.364 12.434 17.056 12.826C16.748 13.2087 16.3887 13.47 15.978 13.61V13.666C16.51 13.8433 16.93 14.1373 17.238 14.548C17.546 14.9587 17.7 15.486 17.7 16.13C17.7 16.7087 17.5647 17.222 17.294 17.67C17.0327 18.1087 16.6453 18.454 16.132 18.706C15.628 18.958 15.026 19.084 14.326 19.084C13.206 19.084 12.31 18.8087 11.638 18.258C10.9753 17.7073 10.6253 16.8767 10.588 15.766H12.912C12.9213 16.1767 13.038 16.5033 13.262 16.746C13.486 16.9793 13.8127 17.096 14.242 17.096C14.606 17.096 14.886 16.9933 15.082 16.788C15.2873 16.5733 15.39 16.2933 15.39 15.948C15.39 15.5 15.2453 15.178 14.956 14.982C14.676 14.7767 14.2233 14.674 13.598 14.674H13.15V12.728H13.598C14.074 12.728 14.4567 12.6487 14.746 12.49C15.0447 12.322 15.194 12.028 15.194 11.608C15.194 11.272 15.1007 11.0107 14.914 10.824C14.7273 10.6373 14.4707 10.544 14.144 10.544C13.7893 10.544 13.5233 10.6513 13.346 10.866C13.178 11.0807 13.08 11.3467 13.052 11.664H10.714Z" fill="white"/>
+                                                </svg>
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">We foster transparency</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden w-6">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left">Our team will help the <span class="font-bold">Causes Leaders to
+                                                        Adopt
+                                                        Transparency</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <!-- end accordion -->
+                                    <div>
+                                        <img src="./public/dashi.png" alt="Dashboard"
+                                            class="w-full rounded-lg mx-auto mt-s md:hidden" />
+                                    </div>
+                                </div>
+                                <div class="md:w-5/10margin justify-center md:ml-l">
+                                    <h6 class="text-h6 text-tertiary uppercase font-semibold text-left md:mt-xs">Donors </h6>
+                                    <!-- accordion -->
+                                    <div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-2 flex items-center hover:text-tertiary">
+                                                <!-- icon number -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M11.378 11.006V8.78H15.256V19H12.764V11.006H11.378Z" fill="white"/>
+                                                </svg>                                                                                                       
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">You join the platform</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                                                                                                    
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left">Enter the contact form to sign up, we process it and give you access to create events!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-2 flex items-center hover:text-tertiary">
+                                                <!-- icon number -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M10.546 17.082C10.8633 16.83 11.008 16.7133 10.98 16.732C11.8947 15.976 12.6133 15.3553 13.136 14.87C13.668 14.3847 14.116 13.876 14.48 13.344C14.844 12.812 15.026 12.294 15.026 11.79C15.026 11.4073 14.9373 11.1087 14.76 10.894C14.5827 10.6793 14.3167 10.572 13.962 10.572C13.6073 10.572 13.3273 10.7073 13.122 10.978C12.926 11.2393 12.828 11.6127 12.828 12.098H10.518C10.5367 11.3047 10.7047 10.642 11.022 10.11C11.3487 9.578 11.7733 9.186 12.296 8.934C12.828 8.682 13.416 8.556 14.06 8.556C15.1707 8.556 16.006 8.84067 16.566 9.41C17.1353 9.97933 17.42 10.7213 17.42 11.636C17.42 12.6347 17.0793 13.5633 16.398 14.422C15.7167 15.2713 14.8487 16.102 13.794 16.914H17.574V18.86H10.546V17.082Z" fill="white"/>
+                                                </svg>                                                    
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">You make key decisions</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left">You set the fees. How much the winner is getting.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="border-b border-primary py-xs md:py-s">
+                                            <button class="accordion-2 flex items-center hover:text-tertiary">
+                                                <!-- icon number -->
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="13.5" cy="13.5" r="13.5" fill="#22365A"/>
+                                                    <path d="M10.714 11.664C10.7513 10.6653 11.078 9.89533 11.694 9.354C12.31 8.81267 13.1453 8.542 14.2 8.542C14.9 8.542 15.4973 8.66333 15.992 8.906C16.496 9.14867 16.874 9.48 17.126 9.9C17.3873 10.32 17.518 10.7913 17.518 11.314C17.518 11.93 17.364 12.434 17.056 12.826C16.748 13.2087 16.3887 13.47 15.978 13.61V13.666C16.51 13.8433 16.93 14.1373 17.238 14.548C17.546 14.9587 17.7 15.486 17.7 16.13C17.7 16.7087 17.5647 17.222 17.294 17.67C17.0327 18.1087 16.6453 18.454 16.132 18.706C15.628 18.958 15.026 19.084 14.326 19.084C13.206 19.084 12.31 18.8087 11.638 18.258C10.9753 17.7073 10.6253 16.8767 10.588 15.766H12.912C12.9213 16.1767 13.038 16.5033 13.262 16.746C13.486 16.9793 13.8127 17.096 14.242 17.096C14.606 17.096 14.886 16.9933 15.082 16.788C15.2873 16.5733 15.39 16.2933 15.39 15.948C15.39 15.5 15.2453 15.178 14.956 14.982C14.676 14.7767 14.2233 14.674 13.598 14.674H13.15V12.728H13.598C14.074 12.728 14.4567 12.6487 14.746 12.49C15.0447 12.322 15.194 12.028 15.194 11.608C15.194 11.272 15.1007 11.0107 14.914 10.824C14.7273 10.6373 14.4707 10.544 14.144 10.544C13.7893 10.544 13.5233 10.6513 13.346 10.866C13.178 11.0807 13.08 11.3467 13.052 11.664H10.714Z" fill="white"/>
+                                                </svg>
+                                                <h4 class="grow text-h4mobile font-bold ml-xs md:text-h4">Donation receipt as NFT</h4>
+                                                <!-- vector down --> 
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="flex">
+                                                    <path d="M2 2L8 8L14 2" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <!-- vector up -->
+                                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    class="hidden">
+                                                    <path d="M14 8L8 2L2 8" stroke="#22365A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <div class="panel">
+                                                <p class="text-justify md:text-left">Provide the donators with unique desings to collect.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end accordion -->
+                                    <div>
+                                        <img src="./public/media/dashi.png" alt="Dashboard"
+                                            class="hidden w-full rounded-lg mx-auto mt-xl md:flex" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CONTACT -->
+                <section id="contact" class="max-w-max md:max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row mb-l md:max-w-86/100 mx-s md:mx-auto md:mb-xl">
+                        <div class="flex flex-col md:w-3070">
+                            <h2 class="text-h3mobile text-center md:text-left font-bold mb-s md:mb-xs md:text-h3">Contact us for more information</h2>
+                        </div>
+                        <div class="flex flex-col md:w-7030 md:ml-l">
+                            
+
+                            <form method="POST" action="#contact" class="flex flex-col mt-s md:mt-0">
+                                <div class="flex flex-col lg2:flex-row">
+                                    <div class="input flex flex-col mb-xs lg2:mr-m">
+                                        <label for="name" class="text-h6 uppercase font-bold">Name<span class="text-red-500">*</span></label>
+                                        <input type="text" name="name" id="name" class="border border-primary rounded-md pl-2" required />
+                                    </div>
+                                    <div class="input flex flex-col mb-xs">
+                                        <label for="phone" class="text-h6 uppercase font-bold">Phone</label>
+                                        <input type="tel" name="phone" id="phone"class="border border-primary rounded-md pl-2" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lg2:flex-row">
+                                    <div class="input flex flex-col mb-xs lg2:mr-m">
+                                        <label for="mail" class="text-h6 uppercase font-bold">Mail<span class="text-red-500">*</span></label>
+                                        <input type="text" name="mail" id="mail" class="border border-primary rounded-md pl-2" required />
+                                    </div>
+                                    <div class="input flex flex-col mb-xs">
+                                        <label for="subject" class="text-h6 uppercase font-bold">Subject<span class="text-red-500">*</span></label>
+                                        <input type="tel" name="subject" id="subject"class="border border-primary rounded-md pl-2" required />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col mb-s">
+                                    <label for="message" class="text-h6 uppercase font-bold">Message<span class="text-red-500">*</span></label>
+                                    <textarea type="text" name="message" rows="8"
+                                        class="border border-primary focus:border-quaternary rounded-md p-2" required></textarea>
+                                </div>
+                                <div class="flex flex-row">
+                                    <button type="submit" name="submit"
+                                        class="w-min grow-0 justify-start border border-transparent bg-quaternary rounded-full text-white font-semibold px-s py-2.5">
+                                        Send
+                                    </button>
+                                    <div class="ml-s">
+                                    </div>
+                                </div>  
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <!-- To implement -->
+            <div class="overflow-x-hidden md:max-w-86/100 md:mx-auto">
+                <div class="flex-col">
+                    <nav class="flex flex-col max-w-95/100 justify-between border-t text-details mx-auto py-s md:flex-row">
+                        <div>Build at ETHPrague 23</div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        // Desktop Navbar
+        window.addEventListener('scroll', function () {
+            if(window.scrollY > 50) {
+                document.querySelector('.navbar')
+                    .classList.remove('md:h-l');
+                document.querySelector('.navbar')
+                    .classList.add('md:h-m');
+                document.querySelector('.navbar')
+                    .classList.add('md:bg-white');
+                document.querySelector('.navbar')
+                    .classList.add('md:shadow-lg');
+
+                document.querySelector('.logo')
+                    .classList.remove('md:h-14');
+                document.querySelector('.logo')
+                    .classList.add('md:h-s');
+
+                document.querySelector('.navcta')
+                    .classList.remove('py-2.5');
+                document.querySelector('.navcta')
+                    .classList.add('py-1.5');
+            } else {
+                document.querySelector('.navbar')
+                    .classList.remove('md:h-m');
+                document.querySelector('.navbar')
+                    .classList.add('md:h-l');
+                document.querySelector('.navbar')
+                    .classList.remove('md:bg-white');
+                document.querySelector('.navbar')
+                    .classList.remove('md:shadow-lg');
+
+                document.querySelector('.logo')
+                    .classList.remove('md:h-s');
+                document.querySelector('.logo')
+                    .classList.add('md:h-14');
+
+                document.querySelector('.navcta')
+                    .classList.remove('py-1.5');
+                document.querySelector('.navcta')
+                    .classList.add('py-2.5');
+            }
+        })
+
+
+        // Mobile Navbar
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobile-nav");
+        const wrapper = document.getElementById("wrapper");
+        const crossIcon = document.getElementById("crossicon");
+        const hamburgerIcon = document.getElementById("hbgicon");
+        const menulabel = hamburger.children[0];
+        const closelabel = hamburger.children[1];
+        const mobilelis = mobileNav.children[0].children;
+        console.log(mobilelis);
+
+        hamburger.addEventListener('click', function () {
+            //mobileNav.classList.toggle("hidden");
+            mobileNav.classList.toggle("translate-x-full");
+            mobileNav.classList.toggle("translate-x-0");
+            wrapper.classList.toggle("h-screen");
+            crossIcon.classList.toggle("hidden");
+            hamburgerIcon.classList.toggle("hidden");
+            menulabel.classList.toggle("hidden");
+            closelabel.classList.toggle("hidden");
+        })
+        var k;
+        for (k = 0; k < mobilelis.length; k++) {
+            mobilelis[k].addEventListener('click', function () {
+                mobileNav.classList.toggle("translate-x-full");
+                mobileNav.classList.toggle("translate-x-0");
+                wrapper.classList.toggle("h-screen");
+                crossIcon.classList.toggle("hidden");
+                hamburgerIcon.classList.toggle("hidden");
+                menulabel.classList.toggle("hidden");
+                closelabel.classList.toggle("hidden");
+            })
+        }
+
+
+
+        var accordions = document.getElementsByClassName("accordion-1");
+        var accordions2 = document.getElementsByClassName("accordion-2");
+        var accContainer = document.getElementsByClassName("bigcontainer");
+        var containerMaxHeight = window.getComputedStyle(accContainer[0]).maxHeight;
+                
+        // accContainer.style.height = accordions[1].style.height * accordions.length;
+        console.log(accContainer);
+        console.log(containerMaxHeight);
+        //console.log(parseInt(accContainer[1].style.height));
+        var i;
+
+        // handle screen width media queries
+
+        /*
+        function screenMd(md) {
+            if (md.matches) {
+                accContainer[0].setAttribute("style", "max-height: 864px; transition: max-height 0.2s ease-out;");
+            }
+        }
+        var md = window.matchMedia("(max-width: 768)");
+        
+        function screenMd3(md3) {
+            if (md3.matches) {
+                accContainer[0].setAttribute("style", "max-height: 901px; transition: max-height 0.2s ease-out;");
+            }
+        }
+        var md3 = window.matchMedia("(max-width: 887)");
+
+        function handleScreenQueries() {
+            screenMd(md);
+            screenMd3(md3);
+        }
+        window.onresize = handleScreenQueries();
+        */
+
+
+        for(i = 0; i < accordions.length; i++) {
+            accordions[i].addEventListener('click', function () {
+                containerMaxHeight = window.getComputedStyle(accContainer[0]).maxHeight;
+                console.log(containerMaxHeight);
+                this.classList.toggle("text-tertiary");
+                var j;
+                for(j = 0; j < accordions.length; j++) {
+                    accordions[j].classList.toggle("active");
+                }
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                var downVector = this.children[2];
+                var upVector = this.children[3];
+                if(panel.style.maxHeight) {
+                    accContainer[0].style.maxHeight = (parseInt(parseInt(containerMaxHeight) - parseInt(panel.style.maxHeight)))+ "px";
+                    //containerMaxHeight = parseInt(parseInt(containerMaxHeight) - parseInt(panel.style.maxHeight));
+                    accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    panel.style.maxHeight = null;
+                    downVector.classList.remove("hidden");
+                    downVector.classList.add("flex");
+                    upVector.classList.remove("flex");
+                    upVector.classList.add("hidden");
+                    panel.classList.toggle("pt-xs");
+                    console.log("container height: ", containerMaxHeight);
+                    console.log("container height: ", window.getComputedStyle(accContainer[0]).maxHeight);
+                } else {
+                    var elt;
+                    for(elt = 0; elt < accordions.length; elt++) {
+                        accordions[elt].classList.remove("text-tertiary");
+                        var eltContent = accordions[elt].nextElementSibling;
+                        var eltdownVector = accordions[elt].children[2];
+                        var eltupVector = accordions[elt].children[3];
+                        //console.log(eltdownVector, eltupVector);
+                        eltContent.style.maxHeight = null;
+                        eltdownVector.classList.add("flex");
+                        eltdownVector.classList.remove("hidden");
+                        eltupVector.classList.add("hidden");
+                        eltupVector.classList.remove("flex");
+                        eltContent.classList.remove("pt-xs");
+                        containerMaxHeight = parseInt(containerMaxHeight) - parseInt(window.getComputedStyle(eltContent).maxHeight);
+                        //console.log(containerMaxHeight);
+                        accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    }
+                    this.classList.toggle("text-tertiary");
+                    downVector.classList.remove("flex");
+                    downVector.classList.add("hidden");
+                    upVector.classList.remove("hidden");
+                    upVector.classList.add("flex");
+                    //console.log(downVector.classList[0], upVector.classList[0]);
+                    panel.classList.toggle("pt-xs");
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    containerMaxHeight = parseInt(parseInt(containerMaxHeight) + parseInt(panel.style.maxHeight));
+                    accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    //console.log(this.children);
+                    console.log("container height: ", containerMaxHeight);
+                }
+            })
+        }
+
+        for(i = 0; i < accordions2.length; i++) {
+            accordions2[i].addEventListener('click', function () {
+                containerMaxHeight = window.getComputedStyle(accContainer[0]).maxHeight;
+                console.log(containerMaxHeight);
+                this.classList.toggle("text-tertiary");
+                var j;
+                for(j = 0; j < accordions2.length; j++) {
+                    accordions2[j].classList.toggle("active");
+                }
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                var downVector = this.children[2];
+                var upVector = this.children[3];
+                if(panel.style.maxHeight) {
+                    containerMaxHeight = parseInt(parseInt(containerMaxHeight) - parseInt(panel.style.maxHeight));
+                    accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    panel.style.maxHeight = null;
+                    downVector.classList.remove("hidden");
+                    downVector.classList.add("flex");
+                    upVector.classList.remove("flex");
+                    upVector.classList.add("hidden");
+                    panel.classList.toggle("pt-xs");
+                    console.log("container height: ", containerMaxHeight);
+                } else {
+                    var elt;
+                    for(elt = 0; elt < accordions2.length; elt++) {
+                        accordions2[elt].classList.remove("text-tertiary");
+                        var eltContent = accordions2[elt].nextElementSibling;
+                        var eltdownVector = accordions2[elt].children[2];
+                        var eltupVector = accordions2[elt].children[3];
+                        //console.log(eltdownVector, eltupVector);
+                        eltContent.style.maxHeight = null;
+                        eltdownVector.classList.add("flex");
+                        eltdownVector.classList.remove("hidden");
+                        eltupVector.classList.add("hidden");
+                        eltupVector.classList.remove("flex");
+                        eltContent.classList.remove("pt-xs");
+                        containerMaxHeight = parseInt(containerMaxHeight) - parseInt(window.getComputedStyle(eltContent).maxHeight);
+                        //console.log(containerMaxHeight);
+                        accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    }
+                    this.classList.toggle("text-tertiary");
+                    downVector.classList.remove("flex");
+                    downVector.classList.add("hidden");
+                    upVector.classList.remove("hidden");
+                    upVector.classList.add("flex");
+                    //console.log(downVector.classList[0], upVector.classList[0]);
+                    panel.classList.toggle("pt-xs");
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    containerMaxHeight = parseInt(parseInt(containerMaxHeight) + parseInt(panel.style.maxHeight));
+                    accContainer[0].style.maxHeight = containerMaxHeight + "px";
+                    //console.log(this.children);
+                    console.log("container height: ", containerMaxHeight);
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>
