@@ -92,41 +92,9 @@
   transition: transform 0.4s ease-in-out;
 }
 
-#roadmap li {
-  /*position: relative;
-  list-style-image: url("../public/media/icons/checkmark\ icon.svg");*/
-  background: url("../public/media/icons/checkmark\ icon.svg") no-repeat left
-    3px; /* <-- change `left` & `top` too for extra control */
-  background-size: 22px 22px;
-  padding: 0px 0px 0px 32px;
-  /* reset styles (optional): */
-  list-style: none;
-}
-
-#roadmapmobile li {
-  /*position: relative;
-  list-style-image: url("../public/media/icons/checkmark\ icon.svg");*/
-  background: url("../public/media/icons/checkmark\ icon.svg") no-repeat left
-    3px; /* <-- change `left` & `top` too for extra control */
-  background-size: 22px 22px;
-  padding: 0px 0px 0px 32px;
-  /* reset styles (optional): */
-  list-style: none;
-}
-
 #contact .input input {
   height: 30px;
 }
-/*
-#roadmap li::before {
-  content: '';  placeholder for the SVG
-  position: absolute;
-  left: 30px;  /* place the SVG at the start of the padding
-  width: 12px;
-  height: 12px;
-  background: url("../public/media/icons/checkmark\ icon.svg");
-}
-*/
 
 @media (min-width: 768px) {
   .bigcontainer {
